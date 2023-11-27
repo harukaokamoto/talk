@@ -31,20 +31,18 @@ class HscrSub(Node):
         msg = String()
 	
 
-        
-	# VOICEVOX EngineのURL
+    # VOICEVOX EngineのURL
+    VOICEVOX_URL = "http://localhost:50021"
 	
-        VOICEVOX_URL = "http://localhost:50021"
-	
-        def text_to_speech(text):
-	    # 音声合成のためのクエリを生成
-            response = requests.post(
-		f"{VOICEVOX_URL}/audio_query",
-		params={
-		    "text": text,
-		    "speaker": 58,
-		},
-	    )
+    def text_to_speech(text):
+	# 音声合成のためのクエリを生成
+        response = requests.post(
+        f"{VOICEVOX_URL}/audio_query",
+        params={
+                "text": text,
+                "speaker": 58,
+                },
+            )
 
         audio_query = response.json()
 
