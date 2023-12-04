@@ -27,7 +27,7 @@ class HscrSub(Node):
 
 
     
-    def movie_start(self):#main４４行目の中で動作してる　この中変える　28〜39ロスで動画流すルール
+    #def movie_start(self):#main４４行目の中で動作してる　この中変える　28〜39ロスで動画流すルール
         msg = String()
 	
 
@@ -85,7 +85,7 @@ def main(args=None): # main¢p
         msg=String()#stringは文字列いれれる 
         while True:           
             rclpy.spin_once(node)#一回ノードを起動する？
-            node.movie_start()#movie_startを実行する
+            node.text_to_speech()#movie_startを実行する
     except KeyboardInterrupt:
         pass#ctl+C(KeyboardInterrupt) node finish
 
