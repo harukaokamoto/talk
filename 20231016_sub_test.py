@@ -26,7 +26,7 @@ class HscrSub(Node):
         msg = String()
         
         br = CvBridge()
-        cap0 =  cv2.VideoCapture(r"/home/uchida/devel1/src/devel/devel/movie/sample_video.mp4")
+        cap0 =  cv2.VideoCapture(r"/home/uchida/devel1/src/devel/devel/movie/joy.mp4")
         while True:
             ret1, frame1 = cap0.read()
             if ret1:               
@@ -48,6 +48,7 @@ def main(args=None):  # main¢p
         msg=String()#stringは文字列いれれる 
         while True:           
             rclpy.spin_once(node)#一回ノードを起動する？
+            time.sleep(10)#10秒待つ（喋り始めに合わせる）
             node.movie_start()#movie_startを実行する
     except KeyboardInterrupt:
         pass    #ctl+C(KeyboardInterrupt) node finish
