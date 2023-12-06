@@ -23,6 +23,7 @@ setup(
         'pub = devel.20231016_pub_test:main',
         'sub = devel.20231016_sub_test:main',
         'speech = devel.sub_speech:main',
+        'chat = devel.voice_chat_bot:main',
         ],
     },
 )
